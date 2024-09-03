@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Flip with Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropbtn">Choose a Box</button>
+        <div class="dropdown-content" id="boxDropdown">
+            <!-- Dynamically added box options will go here -->
+        </div>
+    </div>
+
+    <div class="small-box" id="newbox"> 
+        new box
+    </div>
+
+    <div class="input-container">
+        <label for="frontText">Front Text:</label>
+        <input type="text" id="frontText" placeholder="Enter text for front">
+        
+        <label for="frontColor">Front Color:</label>
+        <input type="color" id="frontColor">
+    
+        <label for="backText">Back Text:</label>
+        <input type="text" id="backText" placeholder="Enter text for back">
+    
+        <label for="backColor">Back Color:</label>
+        <input type="color" id="backColor">
+        
+        <button id="updateBox">Update Box</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

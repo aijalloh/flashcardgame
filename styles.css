@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px; /* Enables 3D perspective */
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.box.flipped .inner-box {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 10px; /* Add padding inside the box */
+    box-sizing: border-box; /* Ensure padding is included in the box size */
+    overflow: hidden; /* Hide overflowed content */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    white-space: normal; /* Allow text to wrap to the next line */
+    text-align: center; /* Center align the text */
+}
+
+.front {
+    background-color: #4CAF50; /* You can set this dynamically in JavaScript */
+}
+
+.back {
+    background-color: #FF5733; /* This can be any color or removed */
+    transform: rotateY(180deg); /* Rotate the back face 180 degrees */
+    background-size: cover; /* Ensure the image covers the entire back face */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    backface-visibility: hidden; /* Hide the back face when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 10px; /* Add padding inside the box */
+    box-sizing: border-box; /* Ensure padding is included in the box size */
+    overflow: hidden; /* Hide overflowed content */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    white-space: normal; /* Prevent text from wrapping */
+}
+
+.small-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FF5733; /* Different background color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Position the box relative to the page */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.input-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container label {
+    margin: 5px 0;
+}
+
+.input-container input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+}
